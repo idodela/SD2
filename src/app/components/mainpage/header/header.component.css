@@ -1,11 +1,14 @@
 .headerSd{
   width: 100%;
   height: 20vh;
-  background-color: lightgreen;
+  background-color: deepskyblue;
   display: flex;
+
 }
+
 
 .headerSd h1{
   align-self: center;
+  color: white;
 }
 

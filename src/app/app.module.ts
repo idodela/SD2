@@ -7,6 +7,10 @@ import { LoginComponent } from './components/mainpage/login/login.component';
 import { HeaderComponent } from './components/mainpage/header/header.component';
 import {FormsModule} from '@angular/forms';
 import { NavbarComponent } from './components/mainpage/navbar/navbar.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { UploadArtworkComponent } from './components/upload-artwork/upload-artwork.component';
+import {RouterModule, Routes} from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +18,14 @@ import { NavbarComponent } from './components/mainpage/navbar/navbar.component';
     LoginComponent,
     HeaderComponent,
     NavbarComponent,
+    UploadArtworkComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
