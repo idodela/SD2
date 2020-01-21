@@ -1,0 +1,9 @@
+.navBody{
+  font-size: 1.3rem;
+}
+.nav-item a.active{
+  border: solid black 1px ;
+
+}
+
+

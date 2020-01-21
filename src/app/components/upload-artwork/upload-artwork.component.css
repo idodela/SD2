@@ -1,0 +1,57 @@
+.container-artwork{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 73vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.form-control-artwork{
+  width: 40%;
+  height: 40vh;
+  border: solid black 3px;
+  display: flex;
+  flex-wrap: wrap;
+
+  flex-direction: column;
+
+}
+
+.form-control-artwork-header{
+  display: flex;
+  align-self: center;
+}
+
+
+
+.uploaded-artwork{
+  width: 40%;
+  height: 20vh;
+  background-color: lightblue;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.uploaded-artwork h2{
+}
+
+.form-control-artwork-inputs{
+  height: 33vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-light{
+  margin-top: 2vh;
+}
+
+.form-control-artwork-inputs button{
+  margin-top: 5px;
+}

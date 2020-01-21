@@ -1,0 +1,25 @@
+<div class="container-artwork">
+
+  <div class="form-control-artwork">
+    <div class="form-control-artwork-header">
+      <h4>Upload your artwork</h4>
+    </div>
+    <div class="form-control-artwork-inputs">
+    <label>Naam <input class="form-control" placeholder="Naam"></label>
+    <label>Prijs <input class="form-control" placeholder="Prijs"></label>
+      <input class="btn-light" type="file" (change)="onFileSelected($event)" >
+      <button class="btn" type="button" (click)="onUpload()">Upload Art</button>
+
+<!--      <a href="javascript:void(0)">Upload image</a>-->
+    </div>
+
+  </div>
+
+
+  <div class="uploaded-artwork">
+
+    <p>uploaded artwork</p>
+
+  </div>
+
+</div>
