@@ -10,7 +10,9 @@ import {error} from "util";
 export class UploadArtworkComponent implements OnInit {
   selectedFile : File = null;
 
+  dvms: String;
   constructor(private http: HttpClient ) { }
+
 
   ngOnInit() {
   }
