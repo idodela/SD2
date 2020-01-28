@@ -1,25 +1,73 @@
-<div class="container-artwork">
+<!--<div class="container-artwork">-->
 
-  <div class="form-control-artwork">
-    <div class="form-control-artwork-header">
-      <h4>Upload your artwork</h4>
+<!--  <div class="form-control-artwork">-->
+<!--    <div class="form-control-artwork-header">-->
+<!--      <h4>Upload your artwork</h4>-->
+<!--    </div>-->
+<!--    <div class="form-control-artwork-inputs">-->
+<!--    <label>Naam <input class="form-control" placeholder="Naam"></label>-->
+<!--    <label>Prijs <input class="form-control" placeholder="Prijs"></label>-->
+<!--      <input class="btn-light" type="file" (change)="onFileSelected($event)" >-->
+<!--      <button class="btn" type="button" (click)="onUpload()">Upload Art</button>-->
+
+<!--&lt;!&ndash;      <a href="javascript:void(0)">Upload image</a>&ndash;&gt;-->
+<!--    </div>-->
+
+<!--  </div>-->
+
+
+<!--  <div class="uploaded-artwork">-->
+
+<!--    <p>uploaded artwork</p>-->
+
+<!--  </div>-->
+
+<!--</div>-->
+
+<form action="" class="main-form" >
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="Username">Username</label>
+        <input type="text" name="Username" id="Username" class="form-control is-invalid" >
+        <div class="invalid-feedback">Username bestaat niet</div>
+
+      </div>
+
     </div>
-    <div class="form-control-artwork-inputs">
-    <label>Naam <input class="form-control" placeholder="Naam"></label>
-    <label>Prijs <input class="form-control" placeholder="Prijs"></label>
-      <input class="btn-light" type="file" (change)="onFileSelected($event)" >
-      <button class="btn" type="button" (click)="onUpload()">Upload Art</button>
+    <div class="col">
+      <div class="form-group">
+        <label for="Voornaam">Voornaam</label>
+        <input type="text" name="Voornaam" id="Voornaam" class="form-control">
+        <label for="achternaam">achternaam</label>
+        <input type="text" name="achternam" id="achternaam" class="form-control">
+      </div>
 
-<!--      <a href="javascript:void(0)">Upload image</a>-->
     </div>
-
   </div>
 
 
-  <div class="uploaded-artwork">
-
-    <p>uploaded artwork</p>
-
+  <div class="form-group">
+  <label for="straat en huisnummer">straat en huisnummer</label>
+  <input type="text" name="straat en huisnummer" id="straat en huisnummer" class="form-control">
+  <label for="postcode">postcode</label>
+  <input type="text" name="postcode" id="postcode" class="form-control">
+  </div>
+  <div class="form-group">
+  <label for="Huur periode">Huur periode</label>
+  <select name="Huur periode" id="huur periode" class="form-control">
+    <option value="3 maanden">3 maanden</option>
+    <option value="4 maanden">4 maanden</option>
+    <option value="5 maanden">5 maanden</option>
+    <option value="6 maanden">6 maanden</option>
+    <option value="7 maanden">7 maanden</option>
+    <option value="8 maanden">8 maanden</option>
+    <option value="9 maanden">9 maanden</option>
+    <option value="10 maanden">10 maanden</option>
+    <option value="11 maanden">11 maanden</option>
+    <option value="12 maanden">12 maanden</option>
+  </select>
+    <small class="form-text text-muted"> u mag maximaal 12 maanden huren</small>
   </div>
 
-</div>
+</form>

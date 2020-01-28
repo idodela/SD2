@@ -55,3 +55,8 @@
 .form-control-artwork-inputs button{
   margin-top: 5px;
 }
+
+.main-form {
+  width: 400px;
+  margin: auto;
+}

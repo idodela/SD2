@@ -1,0 +1,74 @@
+*{
+  margin-top: 0px;
+  padding:0px ;
+}
+
+/*
+posters centreren en de hoogte automatisch aanpassen
+ */
+.mainPosters{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1400px;
+
+}
+
+
+/*
+breedte van de fots en achtergrond
+ */
+
+.posters{
+  display: inline-block;
+  background-color: white;
+  width: 20%;
+  border-radius: 5px;
+  margin: 40px;
+  /*
+  schaduw achtergrond
+   */
+  box-shadow: 2px 2px 10px black;
+}
+
+.image img {
+  width: 100%;
+  /*
+  de radios van de image rechter en linker hoek
+   */
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  transition: 1s;
+}
+
+.image img:hover{
+  transform: scale(1.1);
+}
+.titleFleet{
+  text-align: center;
+  padding: 5px;
+
+}
+/*
+text van description titel gaat naar het midden
+ */
+
+.desFleet{
+  text-align: center;
+  padding: 4px;
+}
+button{
+  margin-top:30px ;
+  background-color: white;
+  margin-bottom: 30px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+
+}
+button:hover{
+  background-color: black;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+}

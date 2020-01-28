@@ -14,6 +14,7 @@ import { LoanedArtsComponent } from './components/loaned-arts/loaned-arts.compon
 import { AvailablaArtsComponent } from './components/availabla-arts/availabla-arts.component';
 import { WalletComponent } from './components/wallet/wallet.component';
 import {HttpClientModule} from '@angular/common/http';
+import { HuurformolierComponent } from './components/huurformolier/huurformolier.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import {HttpClientModule} from '@angular/common/http';
     LoanedArtsComponent,
     AvailablaArtsComponent,
     WalletComponent,
+    HuurformolierComponent,
   ],
   imports: [
     BrowserModule,
