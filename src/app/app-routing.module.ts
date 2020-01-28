@@ -5,6 +5,7 @@ import {UploadArtworkComponent} from './components/upload-artwork/upload-artwork
 import {LoanedArtsComponent} from './components/loaned-arts/loaned-arts.component';
 import {AvailablaArtsComponent} from './components/availabla-arts/availabla-arts.component';
 import {WalletComponent} from './components/wallet/wallet.component';
+import {HuurformolierComponent} from "./components/huurformolier/huurformolier.component";
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'upload-artwork', component: UploadArtworkComponent},
   {path: 'loaned-arts', component: LoanedArtsComponent},
   {path: 'availabla-arts', component: AvailablaArtsComponent},
-  {path: 'wallet', component: WalletComponent}
+  {path: 'wallet', component: WalletComponent},
+  {path:'huurformulier', component: HuurformolierComponent}
 ];
 
 @NgModule({
