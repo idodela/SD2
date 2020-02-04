@@ -9879,5 +9879,12 @@ h3 {
   width: 400px;
   margin: auto;
 }
+.form-group .fa-images{
+  margin-right: auto;
+}
+.form-group .btn-primary{
+  margin-top: 10px;
+
+}
 
 /*# sourceMappingURL=huurformolier.component.css.map */
