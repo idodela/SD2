@@ -2,13 +2,18 @@
 
   <div class="form-control-artwork">
     <div class="form-control-artwork-header">
-      <h4>Upload your artwork</h4>
+      <h4><i class="fas fa-upload"></i>Upload your artwork</h4>
     </div>
     <div class="form-control-artwork-inputs">
     <label>Naam <input class="form-control" placeholder="Naam"></label>
-    <label>Prijs <input class="form-control" placeholder="Prijs"></label>
-      <input class="btn-light" type="file" (change)="onFileSelected($event)" >
-      <button class="btn" type="button" (click)="onUpload()">Upload Art</button>
+      <label>Description <input class="form-control" placeholder="Description"></label>
+    <label>Price <input class="form-control" placeholder="Price"></label>
+      <div class="btn-choose">
+      <input  class="btn-success" type="file" (change)="onFileSelected($event)" >
+      <button class="btn-primary" type="button" (click)="onUpload()">Upload Art</button>
+      </div>
+<!--      <input class="btn-primary" type="file" (change)="onFileSelected($event)">-->
+
 
 <!--      <a href="javascript:void(0)">Upload image</a>-->
     </div>

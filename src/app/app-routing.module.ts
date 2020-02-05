@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'upload-artwork', component: UploadArtworkComponent},
   {path: 'loaned-arts', component: LoanedArtsComponent},
-  {path: 'availabla-arts', component: AvailablaArtsComponent},
+  {path: 'available-arts', component: AvailablaArtsComponent},
   {path: 'wallet', component: WalletComponent},
   {path:'huurformulier', component: HuurformolierComponent}
 ];

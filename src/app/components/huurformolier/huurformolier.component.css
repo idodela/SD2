@@ -52,6 +52,20 @@ font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif !important;;
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
+body{
+  content:'';
+  position: fixed;
+  width: 100vw;
+  height: 100vw;
+  background-image: url("src/assets/ai.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  /*-webkit-filter: blur(2px);*/
+
+}
+
 
 body {
   margin: 0;
@@ -9885,6 +9899,43 @@ h3 {
 .form-group .btn-primary{
   margin-top: 10px;
 
+}
+
+
+
+.huurformulier-content{
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+}
+.huurformulier{
+  background:  rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 5px;
+
+
+}
+
+.huurformulier input{
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-radius: 0;
+
+
+}
+.huurformulier-content input{
+  color: #fff;
+}
+.btn-primary{
+  background-color: red  !important;
+  border-color: red !important;
+}
+.form-group label{
+  font-size: 2vh;
 }
 
 /*# sourceMappingURL=huurformolier.component.css.map */

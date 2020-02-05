@@ -19,8 +19,10 @@
 
 .login-from{
   width: 23%;
-  height: 32vh;
-  background: white;
+  height: 50vh;
+  background:  rgba(0, 0, 0, 0.6);
+  color: white;
+;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,33 +30,131 @@
 }
 
 .login-from input{
-  border: lightgrey solid 1px;
-  border-radius: 5px;
+  /*border: lightgrey solid 1px;*/
+  /*border-radius: 5px;*/
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
   margin-bottom: 10px;
+  font-weight: lighter;
+  color: #fff;
+
 }
 
 .login-from h2{
+  margin-top: 6vh;
   margin-bottom: 20px;
-  margin-top: 5px;
+  font-weight: lighter;
 }
 
 .login-from a:hover{
   cursor: pointer;
-  color: deepskyblue;
+  color: red;
+  font-weight: lighter;
+}
+
+
+.forgot-password{
+  height: 20vh;
+  display: flex;
+}
+
+.forgot-password a{
+  align-self: center;
+
 }
 
 .login-from button{
-  margin-top: 5px;
-  width: 40%;
-  height: 6vh;
-  background-color: white;
+  margin-top: 15px;
+  width: 60%;
+  height: 4vh;
+  background-color: red;
   border-radius: 10px;
   color: black;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
+  border-color: transparent;
+  font-weight: lighter;
+
 }
 .login-from button:hover{
-  background-color: deepskyblue;
+  /*background-color: deepskyblu;*/
   color: white;
 
 }
+/*body{*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*}*/
+/*body:before{*/
+/*  content:'';*/
+/*  position: fixed;*/
+/*  width: 100vw;*/
+/*  height: 100vw;*/
+/*  background-image: url("../../../../assets/nachtwacht .jpg");*/
+/*  background-position: center center;*/
+/*  background-repeat: no-repeat;*/
+/*  background-attachment: fixed;*/
+/*  -webkit-background-size: cover;*/
+/*  !*-webkit-filter: blur(2px);*!*/
+
+/*}*/
+/*.contact-form{*/
+/*  position: absolute;*/
+/*  top: 50%;*/
+/*  left: 50%;*/
+/*  -webkit-transform: translate(-50%,-50%);*/
+/*  -moz-transform:translate(-50%,-50%) ;*/
+/*  -ms-transform: translate(-50%,-50%);*/
+/*  -o-transform: translate(-50%,-50%);*/
+/*  transform: translate(-50%,-50%);*/
+/*  margin-top: 100px;*/
+/*  width: 400px;*/
+/*  height: 450px;*/
+/*  padding: 90px 10px 20px 40px;*/
+/*  background: rgba(0, 0, 0, 0.6);*/
+/*}*/
+/*.contact-form h2{*/
+/*  margin: 0;*/
+/*  padding: 0 0 20px;*/
+/*  color: #fff;*/
+/*  text-align: center;*/
+/*  text-transform: uppercase;*/
+/*}*/
+/*.contact-form p{*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  font-weight: bold;*/
+/*  color: #fff;*/
+
+/*}*/
+/*.contact-form input{*/
+/*  width: 100%;*/
+/*  margin-bottom: 20px;*/
+
+/*}*/
+/*.contact-form input[type=email],*/
+/*.contact-form input[type=password]{*/
+/*  border: none;*/
+/*  border-bottom: 1px solid #fff;*/
+/*  background: transparent;*/
+/*  outline: none;*/
+/*  height: 35px;*/
+/*  color: #fff;*/
+/*  font-size: 15px;*/
+/*}*/
+/*.contact-form input[type=submit]{*/
+/*  height: 30px;*/
+/*  color: #fff;*/
+/*  font-size: 15px;*/
+/*  background: red;*/
+/*  cursor: pointer;*/
+/*  border-radius: 25px;*/
+/*  border: none;*/
+/*  outline: none;*/
+/*  margin-top: 15%;*/
+/*}*/
+/*input[type=checkbox]{*/
+/*  width: 20%;*/
+/*}*/

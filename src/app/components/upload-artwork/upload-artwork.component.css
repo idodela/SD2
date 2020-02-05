@@ -9,17 +9,25 @@
   flex-wrap: wrap;
   align-content: center;
   justify-content: space-around;
+
+
 }
 
 .form-control-artwork{
-  width: 40%;
-  height: 40vh;
+  width: 50%;
+  height: 50vh;
   border: solid black 3px;
   display: flex;
   flex-wrap: wrap;
+  background:  rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 5px;
 
   flex-direction: column;
 
+}
+form-control-artwork input{
+  background: transparent;
 }
 
 .form-control-artwork-header{
@@ -46,6 +54,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+
 }
 
 .btn-light{
@@ -55,4 +64,12 @@
 .form-control-artwork-inputs button{
   margin-top: 5px;
 }
+.btn-choose .btn-success{
+  background-color: red;
+}
+.btn-choose .btn-primary{
+  background-color: red;
 
+}.form-control-artwork .fa-upload{
+  margin-right: 5px;
+}
