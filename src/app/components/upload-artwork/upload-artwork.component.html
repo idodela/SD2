@@ -9,7 +9,16 @@
       <label>Description <input class="form-control" placeholder="Description"></label>
     <label>Price <input class="form-control" placeholder="Price"></label>
       <div class="btn-choose">
-      <input  class="btn-success" type="file" (change)="onFileSelected($event)" >
+<!--        <div class="new-btn">-->
+<!--        <span class="btn-upload">Upload File</span>-->
+<!--        </div>-->
+      <input  class="btn-success" type="file"  id="file" (change)="onFileSelected($event)" >
+        <label for="file">
+<!--          <i class="material-icons">-->
+<!--            add_photo_alternate-->
+<!--          </i> &nbsp;-->
+          choose a photo
+        </label>
       <button class="btn-primary" type="button" (click)="onUpload()">Upload Art</button>
       </div>
 <!--      <input class="btn-primary" type="file" (change)="onFileSelected($event)">-->
@@ -22,6 +31,7 @@
 
 
   <div class="uploaded-artwork">
+    <img id="Image1" src="src/assets/rgb.jpg" class="card-img"/>
 
     <p>uploaded artwork</p>
 

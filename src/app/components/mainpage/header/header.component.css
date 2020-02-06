@@ -10,7 +10,7 @@
 .headerSd{
   width: 100%;
   height: 20vh;
-  background-color: orangered;
+  background-color: red;
   display: flex;
  justify-content: center;
 }

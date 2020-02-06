@@ -73,3 +73,50 @@ form-control-artwork input{
 }.form-control-artwork .fa-upload{
   margin-right: 5px;
 }
+ .btn-choose input[type="file"]{
+   display: none;
+
+ }
+ .btn-choose label{
+   color: white;
+   height: 40px;
+   width: 200px;
+   background-color: #f5af09;
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   font-size: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: Monaco,sans-serif;
+ }
+
+/*.form-control-artwork-inputs input[type=file]{*/
+/*  color: transparent;*/
+/*}*/
+
+/*.new-btn{*/
+
+/*  top: 45px;*/
+/*  left: 70px;*/
+/*  padding: 5px 5px;*/
+/*  font-size: 15px;*/
+/*  text-align: center;*/
+/*  cursor: pointer;*/
+/*  background: green;*/
+/*  color: #fff;*/
+/*}*/
+/*#inp{*/
+
+/*  left: 50px;*/
+/*  top: 50px;*/
+/*}*/
+/*.btn-upload:hover{*/
+/*  background: red;*/
+/*  -webkit-transition: all 1s;*/
+/*  -moz-animation: all 1s;*/
+
+/*}*/
