@@ -1,147 +1,33 @@
-
-<!--<div class="mainPosters">-->
-
-<!--  <div class="posters">-->
-<!--    <div class="image">-->
-<!--      <img src="../img/teslas.jpg" alt="tesla">-->
-<!--    </div>-->
-
-
-
-<!--    <div class="titleFleet">-->
-<!--      <h1>Tesla S</h1>-->
-
-<!--    </div>-->
-
-<!--    <div class="desFleet">-->
-<!--      <p>Tesla model S is een electrische auto.</p>-->
-<!--      <a (click)="goto()"> home</a>-->
-
-<!--    </div>-->
-
-<!--  </div>-->
-
-
-<!--  <div class="posters">-->
-<!--    <div class="image">-->
-<!--      <img src="../img/sclass.jpg" alt="sclass">-->
-<!--    </div>-->
-
-
-
-<!--    <div class="titleFleet">-->
-<!--      <h1>Mercedes S</h1>-->
-
-<!--    </div>-->
-
-<!--    <div class="desFleet">-->
-<!--      <p>Mersedes model S class is een luxe sedaan.</p>-->
-<!--      <a href="huurformolier.component.html">-->
-<!--        <button>Bestel</button></a>-->
-<!--    </div>-->
-
-<!--  </div>-->
-
-<!--  <div class="posters">-->
-<!--    <div class="image">-->
-<!--      <img src="../img/vclass.jpg" alt="vclass">-->
-<!--    </div>-->
-
-
-
-<!--    <div class="titleFleet">-->
-<!--      <h1>Mercedes V</h1>-->
-
-<!--    </div>-->
-
-<!--    <div class="desFleet">-->
-<!--      <p>Mercedes V-class is een luxe busje.</p>-->
-<!--      <a href="huurformolier.component.html"><button>Bestel</button></a>-->
-<!--    </div>-->
-
-<!--  </div>-->
-
-<!--  <div class="posters">-->
-<!--    <div class="image">-->
-<!--      <img src="../img/eclass.jpg" alt="eclass">-->
-<!--    </div>-->
-
-
-
-<!--    <div class="titleFleet">-->
-<!--      <h1>Mercedes E</h1>-->
-
-<!--    </div>-->
-
-<!--    <div class="desFleet">-->
-<!--      <p>Mercedes E-class is een luxe sedaan .</p>-->
-<!--      <a href="huurformolier.component.html"> <button>Bestel</button></a>-->
-
-
-<!--    </div>-->
-
-<!--  </div>-->
-<!--  <div class="posters">-->
-<!--    <div class="image">-->
-<!--      <img src="../img/estation.jpg" alt="estation">-->
-<!--    </div>-->
-
-
-
-<!--    <div class="titleFleet">-->
-<!--      <h1>Mercedes E</h1>-->
-
-<!--    </div>-->
-
-<!--    <div class="desFleet">-->
-<!--      <p>Mercedes E-class station is een luxe sedaan.</p>-->
-<!--      <a href="huurformolier.component.html"><button>Bestel</button></a>-->
-
-<!--    </div>-->
-
-<!--  </div>-->
-
-<!--  <div class="posters">-->
-<!--    <div class="image">-->
-<!--      <img src="../img/audi.jpg" alt="audi">-->
-<!--    </div>-->
-
-
-
-<!--    <div class="titleFleet">-->
-<!--      <h1>Audi A6</h1>-->
-
-<!--    </div>-->
-
-<!--    <div class="desFleet">-->
-<!--      <p>Audi A6 is een luxe sedaan</p>-->
-<!--      <a href="huurformolier.component.html"> <button>Bestel</button></a>-->
-
-<!--    </div>-->
-
-<!--  </div>-->
-<!--</div>-->
-
-<div *ngFor="let art of artsList">
-  <ng-container *ngTemplateOutlet="artOverview; context: {art: art}"></ng-container>
+<html>
+<body>
+<div class="container-available-arts">
+<div *ngFor="let art of artsList" (click)="onViewArt(art)">
+  <ng-container *ngTemplateOutlet="artOverview; context: {art: art}" ></ng-container>
 </div>
 
+</div>
 <ng-template #artOverview let-art="art">
-  <div class="row">
-    <div class="col-2">
-      <h5>{{ art.id }}</h5>
-    </div>
+  <div class="containerArt">
+<!--    <div class="col-2">-->
+<!--      <h5>{{ art.id }}</h5>-->
+<!--    </div>-->
 
-    <div class="col-4">
+    <div class=" artName col-4">
       <h5>{{ art.name }}</h5>
     </div>
 
-    <div class="col-3">
-      <h5>{{ art.description }}</h5>
-    </div>
+<!--    <div class="col-3">-->
+<!--      <h5>{{ art.description }}</h5>-->
+<!--    </div>-->
 
-    <div class="col-3">
-      <h5>{{ art.price}}</h5>
-    </div>
+<!--    <div class="col-3">-->
+<!--      <h5>{{ art.price}}</h5>-->
+<!--    </div>-->
+    <img [src]="art.img"  alt="error"/>
   </div>
 </ng-template>
+
+
+</body>
+</html>
+

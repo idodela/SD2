@@ -22,7 +22,8 @@ export class AvailablaArtsComponent implements OnInit {
 
 
 
-  goto(){
-    this.router.navigate(['huurformulier']);
+  //This method opens a matDialog modal with the details of the Art
+  onViewArt(selectedArt: Art){
+
   }
 }
