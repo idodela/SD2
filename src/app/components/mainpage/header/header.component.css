@@ -1,14 +1,34 @@
+
+.body_custom{
+  background-color: #171a1d;
+}
+.body_custom.headerSd {
+  text-align: center;
+  padding: 50px;
+  font-size: 125px;
+}
 .headerSd{
   width: 100%;
   height: 20vh;
-  background-color: deepskyblue;
+  background-color: orangered;
   display: flex;
-
+ justify-content: center;
 }
 
 
 .headerSd h1{
   align-self: center;
   color: white;
+  font-family: monospace;
+}
+
+.header-title{
+  display: flex;
+}
+.homepage-title {
+  align-self: center;
+  font-weight: normal;
+  font-family: Copperplate, serif !important;
+  letter-spacing: 0.2vh;
 }
 

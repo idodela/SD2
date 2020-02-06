@@ -1,0 +1,75 @@
+.container-artwork{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 73vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+
+
+}
+
+.form-control-artwork{
+  width: 50%;
+  height: 50vh;
+  border: solid black 3px;
+  display: flex;
+  flex-wrap: wrap;
+  background:  rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 5px;
+
+  flex-direction: column;
+
+}
+form-control-artwork input{
+  background: transparent;
+}
+
+.form-control-artwork-header{
+  display: flex;
+  align-self: center;
+}
+
+
+
+.uploaded-artwork{
+  width: 40%;
+  height: 20vh;
+  background-color: lightblue;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.uploaded-artwork h2{
+}
+
+.form-control-artwork-inputs{
+  height: 33vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.btn-light{
+  margin-top: 2vh;
+}
+
+.form-control-artwork-inputs button{
+  margin-top: 5px;
+}
+.btn-choose .btn-success{
+  background-color: red;
+}
+.btn-choose .btn-primary{
+  background-color: red;
+
+}.form-control-artwork .fa-upload{
+  margin-right: 5px;
+}

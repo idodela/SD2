@@ -1,5 +1,35 @@
 .navBody{
   font-size: 1.3rem;
 }
+.nav-item a.active{
+  border: solid black 1px ;
+
+}
+.navbar{
+  background-color: #495057;
+}
 
 
+.nav-item .fa-upload{
+  margin-right: 10px;
+
+}
+.nav-item .fa-american-sign-language-interpreting{
+  margin-right: 10px;
+}
+
+.nav-item .fa-palette{
+  margin-right: 10px;
+}
+
+.nav-item .fa-ad{
+  margin-right: 10px;
+}
+.nav-item .fa-home{
+  margin-right: 10px;
+}
+
+#custom-log-out{
+  margin-left: 372px;
+
+}
