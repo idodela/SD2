@@ -1,3 +1,4 @@
+<body>
 <div class="container-artwork">
 
   <div class="form-control-artwork">
@@ -9,18 +10,21 @@
       <label>Description <input class="form-control" placeholder="Description"></label>
     <label>Price <input class="form-control" placeholder="Price"></label>
       <div class="btn-choose">
-<!--        <div class="new-btn">-->
-<!--        <span class="btn-upload">Upload File</span>-->
-<!--        </div>-->
-      <input  class="btn-success" type="file"  id="file" (change)="onFileSelected($event)" >
-        <label for="file">
-<!--          <i class="material-icons">-->
-<!--            add_photo_alternate-->
-<!--          </i> &nbsp;-->
-          choose a photo
-        </label>
-      <button class="btn-primary" type="button" (click)="onUpload()">Upload Art</button>
+      <input  class="btn-success" type="file"  (change)="fileProgress($event)"
+      >
       </div>
+      <div *ngIf="fileUploadProgress">
+        Upload progress: {{ fileUploadProgress }}
+      </div>
+
+      <div class="mb-3" *ngIf="uploadedFilePath">
+        {{uploadedFilePath}}
+      </div>
+
+      <div class="uploadArt">
+        <button class="btn-primary" type="button" >Upload Art</button>
+      </div>
+
 <!--      <input class="btn-primary" type="file" (change)="onFileSelected($event)">-->
 
 
@@ -31,11 +35,15 @@
 
 
   <div class="uploaded-artwork">
-    <img id="Image1" src="src/assets/rgb.jpg" class="card-img"/>
 
-    <p>uploaded artwork</p>
+    <p>Preview</p>
+    <div class="image-preview mb-3 uploadArt" *ngIf="previewUrl">
+      <img [src]="previewUrl" height="300" />
+    </div>
 
   </div>
 
 </div>
+
+</body>
 

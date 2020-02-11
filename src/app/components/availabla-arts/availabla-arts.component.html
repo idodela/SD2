@@ -1,6 +1,7 @@
 <html>
 <body>
 <div class="container-available-arts">
+
 <div *ngFor="let art of artsList" (click)="onViewArt(art)">
   <ng-container *ngTemplateOutlet="artOverview; context: {art: art}" ></ng-container>
 </div>

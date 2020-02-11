@@ -1,5 +1,8 @@
 .navBody{
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  font-family: Copperplate, serif !important;
+
+
 }
 .nav-item a.active{
   border: solid black 1px ;
@@ -29,7 +32,14 @@
   margin-right: 10px;
 }
 
-#custom-log-out{
-  margin-left: 5em;
-
+.navbar-nav{
+  width: 100%;
+  display: flex;
 }
+
+#custom-log-out{
+  display: flex;
+flex-grow: 100;
+  justify-content: flex-end;
+}
+

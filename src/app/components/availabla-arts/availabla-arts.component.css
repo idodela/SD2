@@ -4,6 +4,9 @@ body{
   max-height: 71vh;
   overflow: scroll;
   background-color: darkgray;
+  font-family: Copperplate, serif !important;
+
+
 }
 .container-available-arts{
   width: 100%;

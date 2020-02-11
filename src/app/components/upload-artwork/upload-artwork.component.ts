@@ -8,26 +8,46 @@ import {error} from "util";
   styleUrls: ['./upload-artwork.component.css']
 })
 export class UploadArtworkComponent implements OnInit {
-  selectedFile : File = null;
+  fileData : File = null;
+  previewUrl:any = null;
+  fileUploadProgress: string = null;
+  uploadedFilePath: string = null;
 
-  dvms: String;
   constructor(private http: HttpClient ) { }
 
 
   ngOnInit() {
   }
-  onFileSelected(event) {
-    this.selectedFile =<File> event.target.files[0];
-  }
-  onUpload() {
-    const fd= new FormData();
-    fd.append('image',this.selectedFile, this.selectedFile.name);
-    this.http.post('https://sd2-praktijk.firebaseio.com/data.json', fd).subscribe(res =>{
-      console.log(res);
-    } , error1 => {
-      console.log(error1)
-    });
 
+  // fill the file variable with the image that is chosen
+  fileProgress(fileInput: any) {
+    this.fileData = <File>fileInput.target.files[0];
+    this.preview();
   }
 
+  // method to preview the image in a div
+  preview() {
+    // Show preview
+    var mimeType = this.fileData.type;
+    if (mimeType.match(/image\/*/) == null) {
+      return;
+    }
+
+    var reader = new FileReader();
+    reader.readAsDataURL(this.fileData);
+    reader.onload = (_event) => {
+      this.previewUrl = reader.result;
+    }
+  }
+// method to post the image to the back-end
+  // onSubmit() {
+  //   const formData = new FormData();
+  //   formData.append('file', this.fileData);
+  //   this.http.post('url/to/your/api', formData)
+  //     .subscribe(res => {
+  //       console.log(res);
+  //       this.uploadedFilePath = res.data.filePath;
+  //       alert('SUCCESS !!');
+  //     })
+  // }
 }

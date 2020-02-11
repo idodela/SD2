@@ -1,3 +1,7 @@
+body{
+  font-family: Copperplate, serif !important;
+
+}
 .container-artwork{
   width: 100%;
   padding-right: 15px;
@@ -33,6 +37,7 @@ form-control-artwork input{
 .form-control-artwork-header{
   display: flex;
   align-self: center;
+  margin-top: 5px;
 }
 
 
@@ -73,50 +78,27 @@ form-control-artwork input{
 }.form-control-artwork .fa-upload{
   margin-right: 5px;
 }
- .btn-choose input[type="file"]{
-   display: none;
 
+ .form-control-artwork-inputs  label{
+   margin-bottom: 40px;
  }
- .btn-choose label{
-   color: white;
-   height: 40px;
-   width: 200px;
-   background-color: #f5af09;
-   margin: auto;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   font-size: 20px;
+
+ .btn-success {
+   font-size: 0.88em;
+  border-radius: 10px;
+ }
+
+ .btn-choose {
    display: flex;
+   width : 100%;
    justify-content: center;
-   align-items: center;
-   font-family: Monaco,sans-serif;
+   margin-bottom: 10px;
  }
 
-/*.form-control-artwork-inputs input[type=file]{*/
-/*  color: transparent;*/
-/*}*/
+ .uploadArt{
+   font-size: 0.88em;
+ }
 
-/*.new-btn{*/
 
-/*  top: 45px;*/
-/*  left: 70px;*/
-/*  padding: 5px 5px;*/
-/*  font-size: 15px;*/
-/*  text-align: center;*/
-/*  cursor: pointer;*/
-/*  background: green;*/
-/*  color: #fff;*/
-/*}*/
-/*#inp{*/
 
-/*  left: 50px;*/
-/*  top: 50px;*/
-/*}*/
-/*.btn-upload:hover{*/
-/*  background: red;*/
-/*  -webkit-transition: all 1s;*/
-/*  -moz-animation: all 1s;*/
 
-/*}*/
