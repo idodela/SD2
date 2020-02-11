@@ -57,7 +57,7 @@ body{
   position: fixed;
   width: 100vw;
   height: 100vw;
-  background-image: url("src/assets/ai.jpg");
+  background-image: url("src/assets/white-art.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -2023,7 +2023,7 @@ pre code {
 }
 .form-control:focus {
   color: #495057;
-  background-color: #fff;
+  background-color: black;
   border-color: #5ab2ff;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 116, 217, 0.25);
@@ -9938,4 +9938,4 @@ h3 {
   font-size: 2vh;
 }
 
-/*# sourceMappingURL=huurformolier.component.css.map */
+/*# sourceMappingURL=rentart.component.css.map */
