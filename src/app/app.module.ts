@@ -14,8 +14,10 @@ import { LoanedArtsComponent } from './components/loaned-arts/loaned-arts.compon
 import { AvailablaArtsComponent } from './components/availabla-arts/availabla-arts.component';
 import { WalletComponent } from './components/wallet/wallet.component';
 import {HttpClientModule} from '@angular/common/http';
-import { HuurformolierComponent } from './components/huurformolier/huurformolier.component';
+import { RentartComponent } from './components/rentart/rentart.component';
 import { ArtDetailsComponent } from './components/art-details/art-details.component';
+import { HomeComponent } from './components/home/home.component';
+
 
 
 @NgModule({
@@ -28,8 +30,10 @@ import { ArtDetailsComponent } from './components/art-details/art-details.compon
     LoanedArtsComponent,
     AvailablaArtsComponent,
     WalletComponent,
-    HuurformolierComponent,
+    RentartComponent,
     ArtDetailsComponent,
+    HomeComponent,
+
   ],
   imports: [
     BrowserModule,

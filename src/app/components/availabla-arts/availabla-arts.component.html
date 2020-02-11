@@ -12,9 +12,14 @@
 <!--    <div class="col-2">-->
 <!--      <h5>{{ art.id }}</h5>-->
 <!--    </div>-->
+    <img [src]="art.img"  alt="error"/>
 
-    <div class=" artName col-4">
-      <h5>{{ art.name }}</h5>
+
+    <div class=" artName ">
+      <h3>{{ art.name }}</h3>
+      <h5>description</h5>
+      <h5>Price</h5>
+      <button class="btn-ava">Order</button>
     </div>
 
 <!--    <div class="col-3">-->
@@ -24,7 +29,8 @@
 <!--    <div class="col-3">-->
 <!--      <h5>{{ art.price}}</h5>-->
 <!--    </div>-->
-    <img [src]="art.img"  alt="error"/>
+
+
   </div>
 </ng-template>
 
