@@ -18,9 +18,8 @@ body{
 }
 
 .form-control-artwork{
-  width: 50%;
+  width: 30%;
   height: 50vh;
-  border: solid black 3px;
   display: flex;
   flex-wrap: wrap;
   background:  rgba(0, 0, 0, 0.6);
@@ -45,7 +44,6 @@ form-control-artwork input{
 .uploaded-artwork{
   width: 40%;
   height: 20vh;
-  background-color: lightblue;
   display: flex;
   flex-wrap: wrap;
 
@@ -80,7 +78,7 @@ form-control-artwork input{
 }
 
  .form-control-artwork-inputs  label{
-   margin-bottom: 40px;
+   margin-bottom: 2.3vh;
  }
 
  .btn-success {
