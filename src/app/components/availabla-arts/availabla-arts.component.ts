@@ -26,4 +26,7 @@ export class AvailablaArtsComponent implements OnInit {
   onViewArt(selectedArt: Art){
   console.log(selectedArt)
   }
+
+
+
 }
