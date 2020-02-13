@@ -14,7 +14,7 @@
 .internal-containerM{
 
   flex: 3;
-  background: red;
+  background: dimgrey;
   padding: 30px;
   font-size: 12px;
   font-family: Roboto, sans-serif;
@@ -22,7 +22,7 @@
 }
 .internal-containerL{
   flex: 1;
-  background: cyan;
+  background: black;
   padding: 30px;
   font-family: Roboto , sans-serif;
   flex-direction: row;
@@ -84,10 +84,12 @@
 }
 .internal-containerL h1{
   font-family: Copperplate, serif !important;
+  color: white;
 }
 .internal-containerL h2{
   font-family: Copperplate, serif !important;
   font-size: 20px;
+  color: white;
 }
 .internal-containerM img{
   width: 500px;
