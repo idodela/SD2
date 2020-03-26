@@ -17,6 +17,10 @@ import {HttpClientModule} from '@angular/common/http';
 import { RentartComponent } from './components/rentart/rentart.component';
 import { ArtDetailsComponent } from './components/art-details/art-details.component';
 import { HomeComponent } from './components/home/home.component';
+import { AngularFireModule} from 'angularfire2' ;
+import {environment} from "../environments/environment";
+import { AngularFireDatabaseModule} from 'angularfire2/database' ;
+
 
 
 
@@ -42,6 +46,8 @@ import { HomeComponent } from './components/home/home.component';
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
 
   ],
   providers: [],
