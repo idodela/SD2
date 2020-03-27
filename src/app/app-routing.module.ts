@@ -7,6 +7,8 @@ import {AvailablaArtsComponent} from './components/availabla-arts/availabla-arts
 import {WalletComponent} from './components/wallet/wallet.component';
 import {RentartComponent} from "./components/rentart/rentart.component";
 import {HomeComponent} from "./components/home/home.component";
+import {AdminusersComponent} from "./components/adminusers/adminusers.component";
+import {MyartsComponent} from "./components/myarts/myarts.component";
 
 
 
@@ -17,7 +19,9 @@ const routes: Routes = [
   {path: 'available-arts', component: AvailablaArtsComponent},
   {path: 'wallet', component: WalletComponent},
   {path:'rentart', component: RentartComponent},
-  {path:'home' , component:HomeComponent}
+  {path:'home' , component:HomeComponent},
+  {path:'adminusers' , component:AdminusersComponent},
+  {path: 'myarts', component: MyartsComponent}
 
 
 

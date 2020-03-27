@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
+
 import {  HostBinding } from '@angular/core';
+import {Router} from "@angular/router";
+// import {moveIn} from ''
 import {
   trigger,
   state,
@@ -9,6 +13,7 @@ import {
   // ...
 } from '@angular/animations';
 import {Subject} from 'rxjs';
+import {UserService} from "../../../services/user.service";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -32,7 +37,9 @@ import {Subject} from 'rxjs';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor( public user: UserService) { }
 
   ngOnInit(): void {
   }

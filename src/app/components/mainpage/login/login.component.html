@@ -8,14 +8,14 @@
 
     <h2>Sign in</h2>
     <label>
-      <input class="form-control" placeholder="Username">
+      <input class="form-control" placeholder="Email" id="email_field">
     </label>
     <label>
-      <input class="form-control" style="margin-bottom: 0" placeholder="Password">
+      <input class="form-control" style="margin-bottom: 0" placeholder="Password" id="password_field">
     </label>
 
 
-    <button >Sign in</button>
+    <button  (click)="user.login()">Sign in</button>
     <div class="forgot-password">
     <a>Forgot your password?</a>
     </div>
