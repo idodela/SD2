@@ -9,6 +9,7 @@ import {RentartComponent} from "./components/rentart/rentart.component";
 import {HomeComponent} from "./components/home/home.component";
 import {AdminusersComponent} from "./components/adminusers/adminusers.component";
 import {MyartsComponent} from "./components/myarts/myarts.component";
+import {AddUserComponent} from "./components/add-user/add-user.component";
 
 
 
@@ -21,7 +22,9 @@ const routes: Routes = [
   {path:'rentart', component: RentartComponent},
   {path:'home' , component:HomeComponent},
   {path:'adminusers' , component:AdminusersComponent},
-  {path: 'myarts', component: MyartsComponent}
+  {path:'adminusers/add-user' , component:AddUserComponent},
+  {path: 'myarts', component: MyartsComponent},
+
 
 
 

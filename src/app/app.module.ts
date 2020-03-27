@@ -22,6 +22,7 @@ import {environment} from "../environments/environment";
 
 import {AdminusersComponent} from './components/adminusers/adminusers.component';
 import {MyartsComponent} from './components/myarts/myarts.component';
+import { AddUserComponent } from './components/add-user/add-user.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import {MyartsComponent} from './components/myarts/myarts.component';
     HomeComponent,
     AdminusersComponent,
     MyartsComponent,
+    AddUserComponent,
 
 
   ],
