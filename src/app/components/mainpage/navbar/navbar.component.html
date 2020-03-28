@@ -24,10 +24,9 @@
       </li>
       <li class="nav-item">
         <a routerLink="rentart"  *ngIf="isST() " routerLinkActive="active"  class="nav-link" ><i class="fas fa-ad"></i>Rentart</a>
-        <a routerLink="rentart" routerLinkActive="active"  class="nav-link" ><i class="fas fa-ad"></i>Rentart</a>
       </li>
       <li class="nav-item">
-        <a routerLink="adminusers" routerLinkActive="active"  class="nav-link" ><i class="fas fa-ad"></i>AdminUsers</a>
+        <a routerLink="adminusers" *ngIf="isAD()" routerLinkActive="active"  class="nav-link" ><i class="fas fa-ad"></i>AdminUsers</a>
       </li>
       <li class="nav-item" id="custom-log-out">
         <a routerLink="" class="nav-link" *ngIf="isLoggedIn()" (click)="onLogOut()"  ><i class="fa fa-sign-out"  aria-hidden="true"></i>Log out</a>

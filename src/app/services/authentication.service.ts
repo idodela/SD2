@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {User} from '../models/user';
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import {JwtHelperService} from '@auth0/angular-jwt';
+import {Router} from '@angular/router';
 
 
 @Injectable({
@@ -13,7 +14,7 @@ export class AuthenticationService {
   currentToken: string = null;
   jwtService = new JwtHelperService();  // utility function to decode token
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private  router : Router) {
     this.updateUserInformation();
   }
 
@@ -77,6 +78,8 @@ export class AuthenticationService {
       this.currentUser = new User(decodedToken.id, decodedToken.name, decodedToken.role);
       console.log(this.currentUser.role);
       this.currentUser.id = decodedToken.id;
+      this.router.navigate(['/home']);
+
     } else {
       this.currentUser = new User('', '', '');
     }
