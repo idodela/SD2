@@ -9,6 +9,9 @@ import {
   // ...
 } from '@angular/animations';
 import {Subject} from 'rxjs';
+import {NgForm} from '@angular/forms';
+import {AuthenticationService} from '../../../services/authentication.service';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -32,9 +35,29 @@ import {Subject} from 'rxjs';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  loading = false;
+  errorMessage: string;
+
+  constructor(private authenticationService :AuthenticationService, private router : Router ) { }
 
   ngOnInit(): void {
+  }
+
+  onSigIn(form: NgForm) {
+    this.loading = true;
+    const userId = form.value.userID;
+    const password = form.value.password;
+
+    this.authenticationService.signIn(userId, password).subscribe(
+      (data) => {
+        this.loading = false;
+
+        this.router.navigate(['/home']);
+      },
+      (error) => {
+        this.errorMessage = error.error.message;
+        this.loading = false;
+      });
   }
 
 }

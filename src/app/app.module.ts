@@ -13,13 +13,12 @@ import {RouterModule, Routes} from '@angular/router';
 import { LoanedArtsComponent } from './components/loaned-arts/loaned-arts.component';
 import { AvailablaArtsComponent } from './components/availabla-arts/availabla-arts.component';
 import { WalletComponent } from './components/wallet/wallet.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { RentartComponent } from './components/rentart/rentart.component';
 import { ArtDetailsComponent } from './components/art-details/art-details.component';
 import { HomeComponent } from './components/home/home.component';
-import { AngularFireModule} from 'angularfire2' ;
-import {environment} from "../environments/environment";
-import { AngularFireDatabaseModule} from 'angularfire2/database' ;
+import {LoginActivate} from './guards/LoginActivate';
+import {AuthInterceptor} from './interceptors/authInterceptor';
 
 
 
@@ -46,11 +45,12 @@ import { AngularFireDatabaseModule} from 'angularfire2/database' ;
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
 
   ],
-  providers: [],
+  providers: [LoginActivate,
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
