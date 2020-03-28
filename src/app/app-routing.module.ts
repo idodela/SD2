@@ -8,6 +8,9 @@ import {WalletComponent} from './components/wallet/wallet.component';
 import {RentartComponent} from "./components/rentart/rentart.component";
 import {HomeComponent} from "./components/home/home.component";
 import {LoginActivate} from './guards/LoginActivate';
+import {AdminusersComponent} from "./components/adminusers/adminusers.component";
+import {MyartsComponent} from "./components/myarts/myarts.component";
+import {AddUserComponent} from "./components/add-user/add-user.component";
 
 
 
@@ -18,7 +21,10 @@ const routes: Routes = [
   {path: 'available-arts', component: AvailablaArtsComponent,data: { requiresLogin: true }, canActivate:[LoginActivate]},
   {path: 'wallet', component: WalletComponent, data: { requiresLogin: true },canActivate:[LoginActivate]},
   {path:'rentart', component: RentartComponent,data: { requiresLogin: true }, canActivate:[LoginActivate]},
-  {path:'home' , component:HomeComponent,data: { requiresLogin: true }, canActivate:[LoginActivate]}
+  {path:'home' , component:HomeComponent,data: { requiresLogin: true }, canActivate:[LoginActivate]},
+  {path:'adminusers' , component:AdminusersComponent, data: { requiresLogin: true }, canActivate:[LoginActivate]},
+  {path:'adminusers/add-user' , component:AddUserComponent, data: { requiresLogin: true }, canActivate:[LoginActivate]},
+  {path: 'myarts', component: MyartsComponent, data: { requiresLogin: true }, canActivate:[LoginActivate]},
 
 
 

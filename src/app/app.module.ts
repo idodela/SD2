@@ -20,7 +20,9 @@ import { HomeComponent } from './components/home/home.component';
 import {LoginActivate} from './guards/LoginActivate';
 import {AuthInterceptor} from './interceptors/authInterceptor';
 
-
+import {AdminusersComponent} from './components/adminusers/adminusers.component';
+import {MyartsComponent} from './components/myarts/myarts.component';
+import { AddUserComponent } from './components/add-user/add-user.component';
 
 
 @NgModule({
@@ -36,6 +38,10 @@ import {AuthInterceptor} from './interceptors/authInterceptor';
     RentartComponent,
     ArtDetailsComponent,
     HomeComponent,
+    AdminusersComponent,
+    MyartsComponent,
+    AddUserComponent,
+
 
   ],
   imports: [
