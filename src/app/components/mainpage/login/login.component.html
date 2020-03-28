@@ -2,26 +2,29 @@
 
 
 <body>
+
+<form (ngSubmit)="onSigIn(f)" #f="ngForm">
 <div class="login-content">
 
   <div  [@slideInOut]="true" class="login-from">
 
     <h2>Sign in</h2>
     <label>
-      <input class="form-control" placeholder="Email" id="email_field">
+      <input class="form-control" ngModel name="userID" placeholder="Username">
     </label>
     <label>
-      <input class="form-control" style="margin-bottom: 0" placeholder="Password" id="password_field">
+      <input type="password" class="form-control" ngModel name="password" style="margin-bottom: 0" placeholder="Password">
     </label>
 
 
-    <button  (click)="user.login()">Sign in</button>
+    <button >Sign in</button>
     <div class="forgot-password">
     <a>Forgot your password?</a>
     </div>
   </div>
 
 </div>
+</form>
 <!--<div class="contact-form">-->
 <!--<h2>Login Form</h2>-->
 <!--  <form action="">-->

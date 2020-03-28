@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-
 import {  HostBinding } from '@angular/core';
-import {Router} from "@angular/router";
-// import {moveIn} from ''
 import {
   trigger,
   state,
@@ -13,7 +9,9 @@ import {
   // ...
 } from '@angular/animations';
 import {Subject} from 'rxjs';
-import {UserService} from "../../../services/user.service";
+import {NgForm} from '@angular/forms';
+import {AuthenticationService} from '../../../services/authentication.service';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -37,11 +35,28 @@ import {UserService} from "../../../services/user.service";
 })
 export class LoginComponent implements OnInit {
 
+  loading = false;
+  errorMessage: string;
 
-
-  constructor( public user: UserService) { }
+  constructor(private authenticationService :AuthenticationService, private router : Router ) { }
 
   ngOnInit(): void {
+  }
+
+  onSigIn(form: NgForm) {
+    this.loading = true;
+    const userId = form.value.userID;
+    const password = form.value.password;
+
+    this.authenticationService.signIn(userId, password).subscribe(
+      (data) => {
+        this.loading = false;
+
+      },
+      (error) => {
+        this.errorMessage = error.error.message;
+        this.loading = false;
+      });
   }
 
 }

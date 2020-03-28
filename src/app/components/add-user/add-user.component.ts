@@ -3,6 +3,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Router} from '@angular/router';
 import {UserService} from "../../services/user.service";
+import {User} from '../../models/user';
 // import {UsersService} from '../../../services/users.service';
 // import {User} from '../../../models/user';
 
@@ -14,11 +15,11 @@ import {UserService} from "../../services/user.service";
 export class AddUserComponent implements OnInit {
   private invalid = false;
   private noneMatchingPasswords = false;
-  // private roles: UserRoles[] = [
-  //   new UserRoles('Runner', 'RUN'),
-  //   new UserRoles('Ground Engineer', 'GE'),
-  //   new UserRoles('Administrator', 'ADM')
-  // ];
+  private roles: UserRoles[] = [
+    new UserRoles('Student', 'ST'),
+    new UserRoles('Employee', 'EM'),
+    new UserRoles('Administrator', 'AD')
+  ];
 
   private userForm = new FormGroup({
     name: new FormControl(),
@@ -41,13 +42,14 @@ export class AddUserComponent implements OnInit {
     }
 
     if (confirmation) {
-    //   this.router.navigate(['../../users']);
-    // }
-  }
+        this.router.navigate(['/adminusers']);
+      }
+    }
 
-  // onAddUser() {
-  //   this.invalid = false;
-  //   this.noneMatchingPasswords = false;
+
+  onAddUser() {
+    this.invalid = false;
+    this.noneMatchingPasswords = false;
 
     if (this.userForm.value.password !== this.userForm.value.validatePassword) {
       this.noneMatchingPasswords = true;
@@ -55,24 +57,30 @@ export class AddUserComponent implements OnInit {
 
     if (!this.userForm.invalid && this.userForm.value.role !== null && !this.noneMatchingPasswords) {
       const userValue = this.userForm.value;
-      // let roleAbbr = 'RUN';
-      // this.roles.forEach(role => {
-      //   if (role.role === userValue.role) {
-      //     roleAbbr = role.abbreviation;
-      //   }
-      // });
-      // const user = new User(userValue.name, roleAbbr, 'OFF', userValue.password);
+      let roleAbbr = 'ST';
+      this.roles.forEach(role => {
+        if (role.role === userValue.role) {
+          roleAbbr = role.abbreviation;
+        }
+      });
+      const user = new User(userValue.name, roleAbbr, 'OFF', userValue.password);
 
-      // console.log(user);
+      console.log(user);
       // this.usersService.addUser(user);
-      // this.router.navigate(['../../users']);
+      this.router.navigate(['../../users']);
     } else {
       if (!this.noneMatchingPasswords) {
         this.invalid = true;
       }
     }
   }
+}
+export class UserRoles {
+  role: string;
+  abbreviation: string;
 
-
-
+  constructor(role: string, abbreviation: string) {
+    this.role = role;
+    this.abbreviation = abbreviation;
+  }
 }
