@@ -27,3 +27,6 @@ input {
   width: 100%;
   border-bottom: #00a1de 1px solid;
 }
+.form-letter {
+  font-family: Copperplate, serif !important;
+}

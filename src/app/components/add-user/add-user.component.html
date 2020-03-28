@@ -6,7 +6,7 @@
 
   <p class="invalidForm" *ngIf="invalid">You forgot to fill in something</p>
   <p class="invalidForm" *ngIf="noneMatchingPasswords">The passwords don't match</p>
-
+<div class="form-letter">
   <form [formGroup]="userForm">
     <div class="row">
       <div class="col-4">
@@ -20,6 +20,7 @@
         <input type="text" id="surname" formControlName="name" required>
         <label for="name">Email:</label>
         <input type="text" id="Email" formControlName="name" required>
+
       </div>
 
       <div class="col-4">
