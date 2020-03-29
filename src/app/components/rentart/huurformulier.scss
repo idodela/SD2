@@ -1,0 +1,13 @@
+
+
+$theme-colors: (
+  "primary": #0074d9,
+  "danger": #ff4136
+);
+
+$border-radius:10rem;
+@import "/Users/idrisdelawar/Desktop/SD2-master/node_modules/bootstrap/scss/bootstrap.scss";
+.main-form {
+  width: 400px;
+  margin: auto;
+}
