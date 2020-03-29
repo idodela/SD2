@@ -22,7 +22,10 @@ export class AddUserComponent implements OnInit {
   ];
 
   private userForm = new FormGroup({
+    username: new FormControl(),
     name: new FormControl(),
+    surname: new FormControl(),
+    email: new FormControl(),
     password: new FormControl(),
     validatePassword: new FormControl(),
     role: new FormControl()
@@ -57,17 +60,17 @@ export class AddUserComponent implements OnInit {
 
     if (!this.userForm.invalid && this.userForm.value.role !== null && !this.noneMatchingPasswords) {
       const userValue = this.userForm.value;
-      let roleAbbr = 'ST';
+      let roleAbbr = '';
       this.roles.forEach(role => {
         if (role.role === userValue.role) {
           roleAbbr = role.abbreviation;
         }
       });
-      const user = new User(userValue.name, roleAbbr, 'OFF', userValue.password);
+      const user = new User(userValue.username, userValue.name, roleAbbr, userValue.surname,userValue.email, userValue.password );
 
       console.log(user);
-      // this.usersService.addUser(user);
-      this.router.navigate(['../../users']);
+      this.usersService.saveUser(user);
+      this.router.navigate(['/adminusers']);
     } else {
       if (!this.noneMatchingPasswords) {
         this.invalid = true;
