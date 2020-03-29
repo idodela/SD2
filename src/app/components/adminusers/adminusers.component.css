@@ -1,11 +1,14 @@
 
 .container{
-  background-color: white;
+  background-color:#00a1de;
 }
 .userRole {
   display: inline;
   font-size: 1.1rem;
   font-family: Copperplate, serif ;
+}
+.container .fa-users{
+  margin-right: 10px;
 }
 
 .users {
@@ -16,6 +19,7 @@
   margin-bottom: 5px;
   border-radius: 5px;
 }
+
 
 .select:hover {
   cursor: pointer;

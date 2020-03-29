@@ -2,10 +2,27 @@
   border-bottom: #00a1de 1px solid;
   background-color: white;
 }
+.container{
+  background-color: #00a1de;
+}
+.user-header{
+  background-color: #00a1de;
+}
+.container .fa-user{
+  margin-right: 10px;
+}
 
 .request {
   border: #00a1de 1px solid;
   padding: 1rem;
+}
+.backbutton{
+  background-color: red;
+  margin-left: 15px;
+}
+.adduserbtn{
+  background-color: red;
+  margin-right: 10px;
 }
 
 button {

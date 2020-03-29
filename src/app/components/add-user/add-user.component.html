@@ -1,7 +1,7 @@
 <div class="container">
 <div class="request">
   <div class="user-header">
-    <h3>Add new User</h3>
+    <h3><i class="fas fa-user"></i>Add new User</h3>
   </div>
 
   <p class="invalidForm" *ngIf="invalid">You forgot to fill in something</p>
@@ -44,8 +44,9 @@
     </div>
   </form>
 
-  <button (click)="onCancel()" class="btn btn-danger">Back</button>
-  <button (click)="onAddUser()" class="btn btn-klm">Add user</button>
+  <button (click)="onCancel()" class="btn backbutton"><i class="fas fa-arrow-circle-left"></i>Back</button>
+  <button (click)="onAddUser()" class="btn adduserbtn"><i class="fas fa-plus"></i>Add user</button>
 </div>
 </div>
 
+</div>
