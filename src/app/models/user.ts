@@ -3,7 +3,7 @@ export class User{
   name: String;
   surname:String;
   email: String;
-  role: String;
+  userType: String;
   password: String;
 
 
@@ -12,7 +12,7 @@ export class User{
     this.name = name;
     this.surname = surname;
     this.email = email;
-    this.role = role;
+    this.userType = role;
     this.password = password
   }
 }

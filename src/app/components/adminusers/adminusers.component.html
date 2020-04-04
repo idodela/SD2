@@ -34,9 +34,9 @@
       <h5>{{ user.name }}</h5>
     </div>
     <div class="col-3">
-      <h5 *ngIf="user.role === 'ADM'">Administrator</h5>
-      <h5 *ngIf="user.role === 'RUN'"></h5>
-      <h5 *ngIf="user.role === 'GE'"></h5>
+      <h5 *ngIf="user.userType === 'AD'">Administrator</h5>
+      <h5 *ngIf="user.userType === 'ST'">Student</h5>
+      <h5 *ngIf="user.userType === 'EM'">Employee</h5>
     </div>
   </div>
 </ng-template>

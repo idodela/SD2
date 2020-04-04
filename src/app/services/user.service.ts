@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {User} from '../models/user';
 import {environment} from '../../environments/environment';
+import {Observable} from 'rxjs';
 
 
 
@@ -17,6 +18,7 @@ export class UserService
   }
 
   getUsers(){
+  return this.http.get<User[]>(environment.apiUrl.concat('/users/'));
 
   }
 
