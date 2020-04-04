@@ -21,6 +21,7 @@ import {AdminusersComponent} from './components/adminusers/adminusers.component'
 import {MyartsComponent} from './components/myarts/myarts.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { EditUserDialogComponent } from './components/edit-user-dialog/edit-user-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -54,7 +55,7 @@ import { EditUserDialogComponent } from './components/edit-user-dialog/edit-user
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    // MatDialogModule
+    MatDialogModule
 
 
   ],

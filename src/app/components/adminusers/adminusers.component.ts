@@ -13,7 +13,7 @@ import {EditUserDialogComponent} from '../edit-user-dialog/edit-user-dialog.comp
 })
 export class AdminusersComponent implements OnInit {
 
-  private users: User[];
+   users: User[];
 
   constructor(private usersService: UserService,
               private authenticationService: AuthenticationService, private router: Router, private route : ActivatedRoute, private dialog: MatDialog) {
