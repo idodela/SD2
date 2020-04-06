@@ -21,10 +21,6 @@
 }
 
 
-.select:hover {
-  cursor: pointer;
-  background-color: grey;
-}
 
 .btn-adduser{
   float: right;

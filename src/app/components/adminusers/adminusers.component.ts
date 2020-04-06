@@ -1,19 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Route, Router, RouterLinkActive} from "@angular/router";
 import {UserService} from "../../services/user.service";
 import {User} from "../../models/user";
 import {AuthenticationService} from '../../services/authentication.service';
 import {MatDialog} from '@angular/material/dialog';
 import {EditUserDialogComponent} from '../edit-user-dialog/edit-user-dialog.component';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-adminusers',
   templateUrl: './adminusers.component.html',
   styleUrls: ['./adminusers.component.css']
 })
-export class AdminusersComponent implements OnInit {
+export class AdminusersComponent implements OnInit, OnDestroy {
 
    users: User[];
+  private subscription: Subscription;
 
   constructor(private usersService: UserService,
               private authenticationService: AuthenticationService, private router: Router, private route : ActivatedRoute, private dialog: MatDialog) {
@@ -23,11 +25,15 @@ export class AdminusersComponent implements OnInit {
     this.router.navigate(['add-user'], {relativeTo:this.route})
   }
   ngOnInit() {
-    this.usersService.getUsers().subscribe(
+    this.subscription = this.usersService.getUsers().subscribe(data => {
+      this.users  = data;
+    });
 
-      users => this.users = users);
 
+  }
 
+  ngOnDestroy(){
+    this.subscription.unsubscribe()
 
   }
 
@@ -41,5 +47,13 @@ export class AdminusersComponent implements OnInit {
 
     this.dialog.open(EditUserDialogComponent);
   }
+
+  onDelete(userId: String){
+    this.usersService.deleteUser(userId);
+    this.ngOnInit()
+
+  }
+
+
 
 }

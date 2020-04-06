@@ -17,7 +17,7 @@ export class UserService
   constructor(private http: HttpClient, private  router : Router) {
   }
 
-  getUsers(){
+  getUsers() : Observable<User[]>{
   return this.http.get<User[]>(environment.apiUrl.concat('/users/'));
 
   }
@@ -28,7 +28,12 @@ export class UserService
     postObservable.subscribe(response => {
       console.log(response);
     });
+  }
 
-
+  deleteUser(userId:String){
+    const deleteObservable = this.http.delete(environment.apiUrl.concat('/users/' + userId))
+   return  deleteObservable.subscribe( response => {
+      console.log(response)
+    })
   }
 }
