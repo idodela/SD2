@@ -13,15 +13,15 @@ import {User} from '../../models/user';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent implements OnInit {
-  private invalid = false;
-  private noneMatchingPasswords = false;
-  private roles: UserRoles[] = [
+  invalid = false;
+   noneMatchingPasswords = false;
+   roles: UserRoles[] = [
     new UserRoles('Student', 'ST'),
     new UserRoles('Employee', 'EM'),
     new UserRoles('Administrator', 'AD')
   ];
 
-  private userForm = new FormGroup({
+   userForm = new FormGroup({
     username: new FormControl(),
     name: new FormControl(),
     surname: new FormControl(),

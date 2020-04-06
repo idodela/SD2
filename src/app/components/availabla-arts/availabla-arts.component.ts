@@ -10,7 +10,7 @@ import {Art} from '../../models/art';
 })
 export class AvailablaArtsComponent implements OnInit {
 
-  private  artsList:Art[];
+    artsList:Art[];
   constructor(private router: Router, private artService: ArtsService) {
 
     this.artsList = this.artService.artsList;

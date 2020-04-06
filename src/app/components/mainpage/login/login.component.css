@@ -72,12 +72,13 @@
   background-color: red;
   border-radius: 10px;
   color: black;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 3s; /* Safari */
   transition-duration: 0.4s;
   border-color: transparent;
   font-weight: lighter;
-
 }
+
+
 .login-from button:hover{
   /*background-color: deepskyblu;*/
   color: white;

@@ -19,15 +19,11 @@ export class AuthenticationService {
   }
 
   isLoggedIn(): boolean {
-    if (this.currentUser.name === '') {
-      return false;
-    }
+    this.currentToken = sessionStorage.getItem('token');
 
-    // check if token is expired
-    const expirationDate: number = this.jwtService.getTokenExpirationDate(this.currentToken).getTime();
-    const currentTime: number = new Date().getTime();
+    return this.currentToken !==null;
 
-    return expirationDate > currentTime;
+
   }
 
   signIn(userId: string, userPassword: string, target?: string) {
@@ -69,14 +65,8 @@ export class AuthenticationService {
     if (this.currentToken != null) {
       const decodedToken = this.jwtService.decodeToken(this.currentToken);
 
-      // this.currentUser = new User();
-      // this.currentUser.name = decodedToken.sub;
-      // this.currentUser.id = decodedToken.id;
-      // this.currentUser.role = decodedToken.role;
-
-
       this.currentUser = new User(decodedToken.id, decodedToken.name, decodedToken.role);
-      console.log(this.currentUser.role);
+      console.log(this.currentUser.userType);
       this.currentUser.id = decodedToken.id;
       this.router.navigate(['/home']);
 

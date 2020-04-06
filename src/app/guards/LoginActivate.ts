@@ -10,15 +10,12 @@ export class LoginActivate implements  CanActivate{
   constructor( private authenticationService: AuthenticationService, private router: Router) {
   }
 
-  canActivate(route: ActivatedRouteSnapshot): Observable<boolean>|Promise<boolean>|boolean {
-    const requiresLogin = route.data.requiresLogin || false;
-    // if (requiresLogin) {
-    //   // Check that the user is logged in...
-    //   if(!this.authenticationService.isLoggedIn())
-    //     this.router.navigate(['']);
-    //     return false
-    // }
-    return true
+  canActivate(): boolean {
+    if (!this.authenticationService.isLoggedIn()) {
+      this.router.navigate(['']);
+      return false;
+    }
+    return true;
   }
 }
 

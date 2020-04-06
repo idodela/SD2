@@ -20,7 +20,7 @@
     </div>
   </div>
 </div>
-<div *ngFor="let user of users" class="users select" (click)="onViewUser(user)">
+<div *ngFor="let user of users" class="users select" >
   <ng-container *ngTemplateOutlet="equipmentOverview; context: {user: user}"></ng-container>
 </div>
 </div>
@@ -34,10 +34,19 @@
       <h5>{{ user.name }}</h5>
     </div>
     <div class="col-3">
-      <h5 *ngIf="user.role === 'ADM'">Administrator</h5>
-      <h5 *ngIf="user.role === 'RUN'"></h5>
-      <h5 *ngIf="user.role === 'GE'"></h5>
+      <h5 *ngIf="user.userType === 'AD'">Administrator</h5>
+      <h5 *ngIf="user.userType === 'ST'">Student</h5>
+      <h5 *ngIf="user.userType === 'EM'">Employee</h5>
+    </div>
+    <div>
+      <button type="button" (click)="onDelete(user.id)" class="btn btn-default btn-sm">
+      <i class="fas fa-trash"></i>
+    </button>
+      <button type="button" (click)="onViewUser(user)" class="btn btn-default btn-sm">
+        <i class="fas fa-edit"></i>
+      </button>
     </div>
   </div>
+
 </ng-template>
 

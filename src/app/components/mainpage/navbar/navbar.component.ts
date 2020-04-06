@@ -24,19 +24,19 @@ export class NavbarComponent implements OnInit {
   }
 
   isAD() {
-    if (this.authenticationService.currentUser.role === 'AD') {
+    if (this.authenticationService.currentUser.userType === 'AD') {
       return true;
     }
   }
 
   isST() {
-    if (this.authenticationService.currentUser.role === 'ST') {
+    if (this.authenticationService.currentUser.userType === 'ST') {
       return true;
     }
   }
 
   isEM() {
-    if (this.authenticationService.currentUser.role === 'EM') {
+    if (this.authenticationService.currentUser.userType === 'EM') {
       return true;
     }
   }

@@ -39,6 +39,7 @@
 }
 .homepage-title {
   align-self: center;
+  font-size: 4vh;
   font-weight: normal;
   font-family: Copperplate, serif !important;
   letter-spacing: 0.2vh;
