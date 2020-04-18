@@ -1,48 +1,111 @@
-<body>
-<div class="container-artwork">
-
-  <div class="form-control-artwork">
-    <div class="form-control-artwork-header">
-      <h4><i class="fas fa-upload"></i>Upload your artwork</h4>
-    </div>
-    <div class="form-control-artwork-inputs">
-    <label>Naam <input class="form-control" placeholder="Naam"></label>
-      <label>Description <input class="form-control" placeholder="Description"></label>
-    <label>Price <input class="form-control" placeholder="Price"></label>
-      <div class="btn-choose">
-      <input  class="btn-success" type="file"  (change)="fileProgress($event)"
-      >
-      </div>
-      <div *ngIf="fileUploadProgress">
-        Upload progress: {{ fileUploadProgress }}
-      </div>
-
-      <div class="mb-3" *ngIf="uploadedFilePath">
-        {{uploadedFilePath}}
-      </div>
-
-      <div class="uploadArt">
-        <button class="btn-primary" type="button" >Upload Art</button>
-      </div>
-
-<!--      <input class="btn-primary" type="file" (change)="onFileSelected($event)">-->
-
-
-<!--      <a href="javascript:void(0)">Upload image</a>-->
+<div class="container">
+  <div class="request">
+    <div class="user-header">
+      <h3><i class="fas fa-user"></i>Add new User</h3>
     </div>
 
-  </div>
+
+    <div class="row">
+      <div class="col-4">
+        <label for="UserId">Username:</label>
+        <input type="text" id="UserId" formControlName="username" required>
+        <div>
+          <label for="price">Price:</label>
+          <input type="text" id="price" formControlName="price" required>
+        </div>
+        <label for="description">Description:</label>
+        <input type="text" id="Description" formControlName="description" required>
+
+      </div>
 
 
-  <div class="uploaded-artwork">
-
-    <div class="image-preview mb-3 uploadArt" *ngIf="previewUrl">
-      <img [src]="previewUrl" height="300" />
     </div>
+          <input  class="btn-success" type="file"  (change)="fileProgress($event)"
+          >
+          </div>
+          <div *ngIf="fileUploadProgress">
+            Upload progress: {{ fileUploadProgress }}
+          </div>
 
-  </div>
+          <div class="mb-3" *ngIf="uploadedFilePath">
+            {{uploadedFilePath}}
+          </div>
 
-</div>
+          <div class="uploadArt">
+            <button class="btn-primary" type="button" >Upload Art</button>
+          </div>
 
-</body>
+    <!--      <input class="btn-primary" type="file" (change)="onFileSelected($event)">-->
+
+
+    <!--      <a href="javascript:void(0)">Upload image</a>-->
+        </div>
+
+
+
+
+      <div class="uploaded-artwork">
+
+        <div class="image-preview mb-3 uploadArt" *ngIf="previewUrl">
+          <img [src]="previewUrl" height="300" />
+        </div>
+
+      </div>
+
+
+
+
+<!--    <button class="btn backbutton"><i class="fas fa-arrow-circle-left"></i>Back</button>-->
+<!--    <button class="btn adduserbtn"><i class="fas fa-plus"></i>Add user</button>-->
+
+
+
+
+<!--<body>-->
+<!--<div class="container-artwork">-->
+
+<!--  <div class="form-control-artwork">-->
+<!--    <div class="form-control-artwork-header">-->
+<!--      <h4><i class="fas fa-upload"></i>Upload your artwork</h4>-->
+<!--    </div>-->
+<!--    <div class="form-control-artwork-inputs">-->
+<!--    <label>Naam <input class="form-control" placeholder="Naam"></label>-->
+<!--      <label>Description <input class="form-control" placeholder="Description"></label>-->
+<!--    <label>Price <input class="form-control" placeholder="Price"></label>-->
+<!--      <div class="btn-choose">-->
+<!--      <input  class="btn-success" type="file"  (change)="fileProgress($event)"-->
+<!--      >-->
+<!--      </div>-->
+<!--      <div *ngIf="fileUploadProgress">-->
+<!--        Upload progress: {{ fileUploadProgress }}-->
+<!--      </div>-->
+
+<!--      <div class="mb-3" *ngIf="uploadedFilePath">-->
+<!--        {{uploadedFilePath}}-->
+<!--      </div>-->
+
+<!--      <div class="uploadArt">-->
+<!--        <button class="btn-primary" type="button" >Upload Art</button>-->
+<!--      </div>-->
+
+<!--&lt;!&ndash;      <input class="btn-primary" type="file" (change)="onFileSelected($event)">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;      <a href="javascript:void(0)">Upload image</a>&ndash;&gt;-->
+<!--    </div>-->
+
+<!--  </div>-->
+
+
+<!--  <div class="uploaded-artwork">-->
+
+<!--    <div class="image-preview mb-3 uploadArt" *ngIf="previewUrl">-->
+<!--      <img [src]="previewUrl" height="300" />-->
+<!--    </div>-->
+
+<!--  </div>-->
+
+<!--</div>-->
+
+<!--</body>-->
 

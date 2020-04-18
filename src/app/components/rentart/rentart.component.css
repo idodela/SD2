@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*!
+/*/
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
@@ -9937,5 +9937,56 @@ h3 {
 .form-group label{
   font-size: 2vh;
 }
+.user-header {
+  border-bottom: #00a1de 1px solid;
+  background-color: white;
+}
+.container{
+  background-color: #00a1de;
+  margin-top: 12vh;
+}
+.user-header{
+  background-color: #00a1de;
+}
+.container .fa-user{
+  margin-right: 10px;
+}
+
+.request {
+  border: #00a1de 1px solid;
+  padding: 1rem;
+}
+.backbutton{
+  background-color: red;
+  margin-left: 15px;
+}
+.adduserbtn{
+  background-color: red;
+  margin-right: 10px;
+}
+
+button {
+  float: right;
+  margin-top: 18px;
+}
+
+select {
+  width: 100%;
+  border-radius: 4px;
+}
+
+input {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.invalidForm {
+  width: 100%;
+  border-bottom: #00a1de 1px solid;
+}
+.form-letter {
+  font-family: Copperplate, serif !important;
+}
+
 
 /*# sourceMappingURL=rentart.component.css.map */

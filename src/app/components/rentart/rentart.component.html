@@ -1,60 +1,108 @@
 
-
-<body>
-
-<div class="huurformulier-content">
-
-
-  <div class="huurformulier">
-
-<form action="" class="main-form needs-validation" >
-  <div class="row">
-    <div class="col">
-      <div class="form-group">
-        <input type="text" placeholder="Username" name="Username" id="Username" class="form-control is-invalid" >
-        <div class="invalid-feedback">Voer een geldige username AUB</div>
-
-      </div>
-
+<div class="container">
+  <div class="request">
+    <div class="user-header">
+      <h3><i class="fas fa-user"></i>Rent a Art</h3>
     </div>
-    <div class="col">
-      <div class="form-group">
-        <input type="text" placeholder="Voornaam" name="Voornaam" id="Voornaam" class="form-control">
-        <input type="text" placeholder="Achternaam" name="achternam" id="achternaam" class="form-control">
-      </div>
 
-    </div>
+
+        <div class="row">
+          <div class="col-4">
+            <label for="UserId">Username:</label>
+            <input type="text" id="UserId" formControlName="username" required>
+            <div>
+              <label for="name">Surname:</label>
+              <input type="text" id="name" formControlName="surname" required>
+            </div>
+            <label for="name">Straat en huisnummer:</label>
+            <input type="text" id="surname" formControlName="straatHuisnummer" required>
+            <label for="name">Zipcode</label>
+            <input type="text" id="Email" formControlName="zipcode" required>
+          </div>
+
+          <div class="col-4">
+                <label for="Huur periode">Huur periode</label>
+                <select name="Huur periode" id="huur periode" class="form-control">
+                  <option value="3 maanden">3 maanden</option>
+                  <option value="4 maanden">4 maanden</option>
+                  <option value="5 maanden">5 maanden</option>
+                  <option value="6 maanden">6 maanden</option>
+                  <option value="7 maanden">7 maanden</option>
+                  <option value="8 maanden">8 maanden</option>
+                  <option value="9 maanden">9 maanden</option>
+                  <option value="10 maanden">10 maanden</option>
+                  <option value="11 maanden">11 maanden</option>
+                  <option value="12 maanden">12 maanden</option>
+                </select>
+                <small class="form-text text-muted"> u mag maximaal 12 maanden huren</small>
+          </div>
+        </div>
+
+
+
+
+        <div><button type="button" class="btn btn-primary"><i class="fas fa-images"></i> Choose Art</button></div>
+        <div><button type="button" class="btn btn-primary"><i class="fas fa-check-circle"></i> Confirm</button></div>
+
+  </div>
   </div>
 
 
-  <div class="form-group">
-    <input type="text" name="straat en huisnummer" placeholder="Straat & Huisnummer" id="straat en huisnummer" class="form-control">
-    <input type="text" name="postcode" placeholder="postcode" id="postcode" class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="Huur periode">Huur periode</label>
-    <select name="Huur periode" id="huur periode" class="form-control">
-      <option value="3 maanden">3 maanden</option>
-      <option value="4 maanden">4 maanden</option>
-      <option value="5 maanden">5 maanden</option>
-      <option value="6 maanden">6 maanden</option>
-      <option value="7 maanden">7 maanden</option>
-      <option value="8 maanden">8 maanden</option>
-      <option value="9 maanden">9 maanden</option>
-      <option value="10 maanden">10 maanden</option>
-      <option value="11 maanden">11 maanden</option>
-      <option value="12 maanden">12 maanden</option>
-    </select>
-    <small class="form-text text-muted"> u mag maximaal 12 maanden huren</small>
-    <div><button type="button" class="btn btn-primary"><i class="fas fa-images"></i> Choose Art</button></div>
-    <div><button type="button" class="btn btn-primary"><i class="fas fa-check-circle"></i> Confirm</button></div>
+<!--<body>-->
+
+<!--<div class="huurformulier-content">-->
 
 
-  </div>
+<!--  <div class="huurformulier">-->
 
-</form>
-  </div>
+<!--<form action="" class="main-form needs-validation" >-->
+<!--  <div class="row">-->
+<!--    <div class="col">-->
+<!--      <div class="form-group">-->
+<!--        <input type="text" placeholder="Username" name="Username" id="Username" class="form-control is-invalid" >-->
+<!--        <div class="invalid-feedback">Voer een geldige username AUB</div>-->
+
+<!--      </div>-->
+
+<!--    </div>-->
+<!--    <div class="col">-->
+<!--      <div class="form-group">-->
+<!--        <input type="text" placeholder="Voornaam" name="Voornaam" id="Voornaam" class="form-control">-->
+<!--        <input type="text" placeholder="Achternaam" name="achternam" id="achternaam" class="form-control">-->
+<!--      </div>-->
+
+<!--    </div>-->
+<!--  </div>-->
 
 
-</div>
-</body>
+<!--  <div class="form-group">-->
+<!--    <input type="text" name="straat en huisnummer" placeholder="Straat & Huisnummer" id="straat en huisnummer" class="form-control">-->
+<!--    <input type="text" name="postcode" placeholder="postcode" id="postcode" class="form-control">-->
+<!--  </div>-->
+<!--  <div class="form-group">-->
+<!--    <label for="Huur periode">Huur periode</label>-->
+<!--    <select name="Huur periode" id="huur periode" class="form-control">-->
+<!--      <option value="3 maanden">3 maanden</option>-->
+<!--      <option value="4 maanden">4 maanden</option>-->
+<!--      <option value="5 maanden">5 maanden</option>-->
+<!--      <option value="6 maanden">6 maanden</option>-->
+<!--      <option value="7 maanden">7 maanden</option>-->
+<!--      <option value="8 maanden">8 maanden</option>-->
+<!--      <option value="9 maanden">9 maanden</option>-->
+<!--      <option value="10 maanden">10 maanden</option>-->
+<!--      <option value="11 maanden">11 maanden</option>-->
+<!--      <option value="12 maanden">12 maanden</option>-->
+<!--    </select>-->
+<!--    <small class="form-text text-muted"> u mag maximaal 12 maanden huren</small>-->
+<!--    <div><button type="button" class="btn btn-primary"><i class="fas fa-images"></i> Choose Art</button></div>-->
+<!--    <div><button type="button" class="btn btn-primary"><i class="fas fa-check-circle"></i> Confirm</button></div>-->
+
+
+<!--  </div>-->
+
+<!--</form>-->
+<!--  </div>-->
+
+
+<!--</div>-->
+<!--</body>-->
