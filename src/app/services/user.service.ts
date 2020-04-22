@@ -13,6 +13,8 @@ import {Observable} from 'rxjs';
 export class UserService
 {
 
+  userList : User[] = [];
+
 
   constructor(private http: HttpClient, private  router : Router) {
   }
@@ -31,7 +33,7 @@ export class UserService
   }
 
   deleteUser(userId:String){
-    const deleteObservable = this.http.delete(environment.apiUrl.concat('/users/' + userId))
+    const deleteObservable = this.http.delete(environment.apiUrl.concat('/users/' + userId) , {responseType:'text'});
    return  deleteObservable.subscribe( response => {
       console.log(response)
     })

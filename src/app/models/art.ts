@@ -1,18 +1,19 @@
 export class Art{
 
-  private id: number;
-  private name: string;
-  private price: number;
-  private img:string;
-  private available: boolean;
+  name: string;
+  price: number;
+  img:string;
+  available: string;
+  description : string;
 
 
-  constructor(id:number, name: string, price:number, img:string, available: boolean){
-    this.id = id;
+
+  constructor( name: string, price:number, img:string, available: string, description?: string){
     this.name = name;
     this.price = price;
     this.img = img;
-    this.available = available
+    this.available = available;
+    this.description = description;
 
   }
 }

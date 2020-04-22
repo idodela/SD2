@@ -1,1 +1,33 @@
-<p>myarts works!</p>
+<html>
+<body>
+<div class="container-available-arts">
+
+  <div *ngFor="let art of myArts; "  >
+    <ng-container *ngTemplateOutlet="artOverview; context: {art: art}"></ng-container>
+  </div>
+
+</div>
+
+<ng-template #artOverview let-art="art">
+
+  <div *ngIf="art.available ==true" class="containerArt">
+    <!--    <div class="col-2">-->
+    <!--      <h5>{{ art.id }}</h5>-->
+    <!--    </div>-->
+    <img [src]="getSantizeUrl(art.img)" alt="error"/>
+    <p>{{art.available}}</p>
+
+    <div class=" artName ">
+      <h3>{{ art.name }}</h3>
+      <h5>Price : {{art.price}},-</h5>
+    </div>
+
+
+
+
+  </div>
+</ng-template>
+
+
+</body>
+</html>

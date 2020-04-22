@@ -19,15 +19,16 @@ export class AdminusersComponent implements OnInit, OnDestroy {
 
   constructor(private usersService: UserService,
               private authenticationService: AuthenticationService, private router: Router, private route : ActivatedRoute, private dialog: MatDialog) {
+    this.subscription = this.usersService.getUsers().subscribe(data => {
+      this.users  = data;
+    });
   }
 
   addUser(){
     this.router.navigate(['add-user'], {relativeTo:this.route})
   }
   ngOnInit() {
-    this.subscription = this.usersService.getUsers().subscribe(data => {
-      this.users  = data;
-    });
+
 
 
   }
@@ -50,8 +51,11 @@ export class AdminusersComponent implements OnInit, OnDestroy {
 
   onDelete(userId: String){
     this.usersService.deleteUser(userId);
-    this.ngOnInit()
+    this.ngOnInit();
 
+    this.subscription = this.usersService.getUsers().subscribe(data => {
+      this.users  = data;
+    });
   }
 
 
