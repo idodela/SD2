@@ -42,7 +42,7 @@ export class AuthenticationService {
         token = token.replace('Bearer ', '');
 
         // this.setToken(token,((response.body as unknown) as User).name)
-        sessionStorage.setItem('token' , token);
+        sessionStorage.setItem('token', token);
         this.updateUserInformation();
       },
       (err) => {

@@ -22,6 +22,11 @@ import {MyartsComponent} from './components/myarts/myarts.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { EditUserDialogComponent } from './components/edit-user-dialog/edit-user-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import {ToastrModule} from 'ngx-toastr';
+import {SpinnerInterceptor} from './interceptors/spinnerInterceptor';
+import {DatePipe} from '@angular/common';
+
 
 
 @NgModule({
@@ -55,12 +60,20 @@ import {MatDialogModule} from '@angular/material/dialog';
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    NgxSpinnerModule,
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      positionClass: 'toast-top-center',
+      preventDuplicates: true
+    })
 
 
   ],
   providers: [LoginActivate,
-    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true},
+    DatePipe
 
   ],
   bootstrap: [AppComponent]

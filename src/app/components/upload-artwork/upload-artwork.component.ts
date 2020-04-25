@@ -70,7 +70,6 @@ export class UploadArtworkComponent implements OnInit {
      uploadImageData.forEach(key=> console.log(key));
 
     this.artService.addArt(uploadImageData).subscribe(res => {
-      console.log(res);
     });
   }
 

@@ -9,6 +9,8 @@
 .conMain{
 }
 
-
+.myapp-no-padding-dialog .mat-dialog-container {
+  background-color: #0b2e13;
+}
 
 

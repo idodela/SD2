@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {UserArtService} from '../../services/user-art.service';
 import {Art} from '../../models/art';
 import {DomSanitizer} from '@angular/platform-browser';
+import {ArtsService} from '../../services/arts.service';
 
 @Component({
   selector: 'app-myarts',
@@ -12,8 +12,8 @@ export class MyartsComponent implements OnInit {
 
   myArts: Art[]= [];
 
-  constructor( private userArtService : UserArtService , private _sanitizer: DomSanitizer) {
-    this.userArtService.getUserArts().subscribe((data:Art[])=>{
+  constructor( private artsService : ArtsService , private _sanitizer: DomSanitizer) {
+    this.artsService.getUserArts().subscribe((data:Art[])=>{
       this.myArts = data;
       console.log(this.myArts);
       this.myArts.forEach(art => {

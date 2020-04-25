@@ -2,34 +2,27 @@
 <body>
 <div class="container-available-arts">
 
-  <div *ngFor="let art of artsList; "   (click)="onViewArt(art)">
+  <div *ngFor="let art of artsList; "  >
     <ng-container *ngTemplateOutlet="artOverview; context: {art: art}"></ng-container>
   </div>
 
 </div>
 
-<ng-template #artOverview   let-art="art" >
+<ng-template #artOverview let-art="art">
 
-  <div *ngIf="art.available ==false" class="containerArt">
+  <div *ngIf="art.available ==true" class="containerArt">
     <!--    <div class="col-2">-->
     <!--      <h5>{{ art.id }}</h5>-->
     <!--    </div>-->
-    <img [src]="art.img"  alt="error"/>
+    <img [src]="getSantizeUrl(art.img)" alt="error"/>
     <p>{{art.available}}</p>
 
     <div class=" artName ">
       <h3>{{ art.name }}</h3>
       <h5>Price : {{art.price}},-</h5>
-      <button  class="btn-ava">Order</button>
     </div>
 
-    <!--    <div class="col-3">-->
-    <!--      <h5>{{ art.description }}</h5>-->
-    <!--    </div>-->
 
-    <!--    <div class="col-3">-->
-    <!--      <h5>{{ art.price}}</h5>-->
-    <!--    </div>-->
 
 
   </div>
@@ -38,4 +31,3 @@
 
 </body>
 </html>
-

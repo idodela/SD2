@@ -6,6 +6,7 @@ import {User} from '../models/user';
 import {environment} from '../../environments/environment';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
+import {ToastrService} from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class ArtsService {
 
   artsList: Art[]=[];
 
-  constructor(private http: HttpClient, private router: Router) {
+  constructor(private http: HttpClient, private router: Router, private toast: ToastrService) {
     // this.addRandomArts()
   }
 
@@ -37,13 +38,26 @@ export class ArtsService {
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'multipart/form-data');
     return this.http.post(environment.apiUrl.concat('/arts'), formData, {headers: headers})
-      .pipe(map((res:any) => res))
+      .pipe(map((res:any) => {this.toast.success("Art has been successfully created")},
+        error => {
+        this.toast.error(error)
+        }))
 
   }
 
   getAllArts(): Observable<any>{
     return this.http.get<Art[]>(environment.apiUrl.concat('/arts'));
 
+  }
+
+  getUserArts(){
+    return this.http.get<Art[]>(environment.apiUrl.concat('/arts/userArts'));
+  }
+
+  loanArt(id:number){
+    return this.http.post(environment.apiUrl.concat('/loan'),id ).subscribe((res) => {
+      console.log(res)
+    })
   }
 }
 

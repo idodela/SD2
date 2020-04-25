@@ -8,7 +8,7 @@
 
 </div>
 
-<ng-template #artOverview let-art="art">
+<ng-template  #artOverview let-art="art">
 
   <div *ngIf="art.available ==true" class="containerArt">
     <!--    <div class="col-2">-->
@@ -16,11 +16,12 @@
     <!--    </div>-->
     <img [src]="getSantizeUrl(art.img)" alt="error"/>
     <p>{{art.available}}</p>
+    <p>{{art.id}}</p>
 
     <div class=" artName ">
       <h3>{{ art.name }}</h3>
       <h5>Price : {{art.price}},-</h5>
-      <button class="btn-ava">Order</button>
+      <button *ngIf="isST()" (click)="orderArt(art.id)" class="btn-ava">Order</button>
     </div>
 
 
@@ -28,6 +29,10 @@
 
   </div>
 </ng-template>
+
+<router-outlet>
+
+</router-outlet>
 
 
 </body>

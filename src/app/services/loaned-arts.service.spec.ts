@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { UserArtService } from './user-art.service';
+import { LoanedArtsService } from './loaned-arts.service';
 
-describe('UserArtService', () => {
-  let service: UserArtService;
+describe('LoanedArtsService', () => {
+  let service: LoanedArtsService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(UserArtService);
+    service = TestBed.inject(LoanedArtsService);
   });
 
   it('should be created', () => {

@@ -18,9 +18,12 @@ const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'upload-artwork', component: UploadArtworkComponent,data: { requiresLogin: true }, canActivate:[LoginActivate]},
   {path: 'loaned-arts', component: LoanedArtsComponent,data: { requiresLogin: true }, canActivate:[LoginActivate]},
-  {path: 'available-arts', component: AvailablaArtsComponent,data: { requiresLogin: true }, canActivate:[LoginActivate]},
+  {path: 'available-arts', component: AvailablaArtsComponent,data: { requiresLogin: true }, canActivate:[LoginActivate], children: [
+      {path: "order", component: RentartComponent, data:{requiresLogin: true},canActivate:[LoginActivate] },
+      {path: "order/:id", component: RentartComponent, data:{requiresLogin: true},canActivate:[LoginActivate] }
+    ]},
   {path: 'wallet', component: WalletComponent, data: { requiresLogin: true },canActivate:[LoginActivate]},
-  {path:'rentart', component: RentartComponent,data: { requiresLogin: true }, canActivate:[LoginActivate]},
+  // {path:'rentart', component: RentartComponent,data: { requiresLogin: true }, canActivate:[LoginActivate]},
   {path:'home' , component:HomeComponent,data: { requiresLogin: true }, canActivate:[LoginActivate]},
   {path:'adminusers' , component:AdminusersComponent, data: { requiresLogin: true }, canActivate:[LoginActivate]},
   {path:'adminusers/add-user' , component:AddUserComponent, data: { requiresLogin: true }, canActivate:[LoginActivate]},

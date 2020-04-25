@@ -1,11 +1,14 @@
 import {Component, OnInit, SecurityContext} from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {ArtsService} from '../../services/arts.service';
 import {Art} from '../../models/art';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
 import { DomSanitizer } from '@angular/platform-browser';
 import {map} from 'rxjs/operators';
+import {AuthenticationService} from '../../services/authentication.service';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import {RentartComponent} from '../rentart/rentart.component';
 
 
 @Component({
@@ -21,7 +24,9 @@ export class AvailablaArtsComponent implements OnInit {
 
 
 
-  constructor(private router: Router, private artService: ArtsService, private httpClient: HttpClient ,private _sanitizer: DomSanitizer) {
+  constructor(private router: Router, private artService: ArtsService, private httpClient: HttpClient
+              ,private _sanitizer: DomSanitizer ,private authService : AuthenticationService,
+              private dialog: MatDialog) {
 
     this.artService.getAllArts().subscribe((data:Art[]) => {
       this.artsList = data;
@@ -72,6 +77,28 @@ export class AvailablaArtsComponent implements OnInit {
   }
 
 
+  printArt(id:number){
+    this.artService.loanArt(id);
+
+
+  }
+
+  orderArt(position){
+    let dialogRef = this.dialog.open(RentartComponent, {
+      data: { id: position},
+      panelClass: 'myapp-no-padding-dialog'
+    })
+
+
+
+
+  }
+
+  isST() {
+    if (this.authService.currentUser.userType === 'ST') {
+      return true;
+    }
+  }
 
 
 }

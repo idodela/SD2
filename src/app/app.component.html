@@ -3,7 +3,14 @@
 <app-header></app-header>
 <app-navbar></app-navbar>
 <div class="conMain">
-<router-outlet></router-outlet>
+
+
+  <router-outlet>
+    <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#FF0000" type="square-jelly-box" [fullScreen]="false"><p
+      style="color: white"> Loading... </p>
+    </ngx-spinner>
+  </router-outlet>
+
 </div>
 </body>
 
