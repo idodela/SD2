@@ -3,6 +3,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {FormControl, FormGroup} from '@angular/forms';
 import {LoanedArtsService} from '../../services/loaned-arts.service';
 import {DatePipe} from '@angular/common';
+import {ArtsService} from "../../services/arts.service";
 
 @Component({
   selector: 'app-rentart',
@@ -17,16 +18,20 @@ export class RentartComponent implements OnInit {
     duur: new FormControl()
   });
 
-  currentDate = new Date();
+  send_date=new Date();
+  datGeleend : any;
 
-  datGeleend: any;
+  back_date=new Date();
+  datTerug : any;
 
-  datTerug: any;
+
+
 
 
   constructor(@Inject(MAT_DIALOG_DATA) public dialogData: any, private dialogRef: MatDialogRef<RentartComponent>,
-              private loanService: LoanedArtsService, public datepipe: DatePipe
+              private loanService: LoanedArtsService, public datepipe: DatePipe, private artService : ArtsService
   ) {
+
 
   }
 
@@ -42,14 +47,19 @@ export class RentartComponent implements OnInit {
     var txt = this.loanForm.value.duur;
     var numb = txt.match(/\d/g);
     numb = numb.join("");
+
+    var months  = parseInt(numb);
     console.log(numb);
-    this.datGeleend = this.datepipe.transform(this.currentDate, 'yyyy-MM-dd');
-
-    this.datTerug = this.datepipe.transform(this.currentDate.setMonth(this.currentDate.getMonth() + numb), 'yyyy-MM-dd');
 
 
+    this.back_date.setMonth(this.back_date.getMonth()+ months);
+    this.datGeleend = this.send_date.toISOString().slice(0,10);
     console.log(this.datGeleend);
+
+    this.datTerug = this.back_date.toISOString().slice(0,10);
     console.log(this.datTerug);
+
+
 
     const uploadImageData = new FormData();
     uploadImageData.append('artId', this.dialogData.id);
@@ -59,7 +69,16 @@ export class RentartComponent implements OnInit {
     uploadImageData.append('datGeleend', this.datGeleend);
     uploadImageData.append('datTerug', this.datTerug);
 
-    this.loanService.loan(uploadImageData)
+    this.loanService.loan(uploadImageData);
+
+
+
+    this.datGeleend =null;
+    this.datTerug =null;
+
+    this.dialogRef.close();
+
+    this.artService.getAllArts()
 
   }
 
